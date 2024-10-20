@@ -51,3 +51,9 @@ The project will be accessible at `http://localhost:8000`.
 
 ### Step 5: Dependencies  
 All required dependencies will be installed automatically inside the containers during the build process.
+
+### Step 6: Open the Upload Page  
+- Once the application is running, open your web browser and navigate to the `/upload_file/` endpoint.
+
+
+- This will open a basic HTML page that allows you to upload a file and enter your email address for notifications.
