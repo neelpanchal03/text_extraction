@@ -14,7 +14,7 @@
     <button type="submit">Upload</button>
 </form>
 
-
+<p>Or <a href="{% url 'upload_url' %}">extract via link</a></p>
 {% if error %}
     <p style="color:red;">{{ error }}</p>
     <meta http-equiv="refresh" content="5; url={% url 'upload_file' %}">

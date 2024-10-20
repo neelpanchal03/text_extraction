@@ -3,7 +3,7 @@ import os
 from celery import shared_task
 from django.core.mail import send_mail
 from .models import Document
-from .utils import extract_text_from_pdf, extract_text_from_docx, extract_text_from_doc
+from .utils import extract_text_from_pdf, extract_text_from_docx, extract_text_from_doc, download_file_from_url
 
 
 @shared_task
@@ -12,6 +12,8 @@ def extract_text_async(doc_id):
         doc = Document.objects.get(id=doc_id)
         if doc.file:
             file_path = doc.file.path
+        elif doc.url:
+            file_path = download_file_from_url(doc.url)
 
         if file_path.endswith('.pdf'):
             doc.extracted_text = extract_text_from_pdf(file_path)

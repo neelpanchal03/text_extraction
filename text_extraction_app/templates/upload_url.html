@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload via URL</title>
+</head>
+<body>
+<form action="{% url 'upload_url' %}" method="POST">
+    {% csrf_token %}
+    <label for="url">Enter File URL:</label>
+    <input type="url" name="url" required>
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+    <button type="submit">Submit URL</button>
+</form>
+
+<p>Or <a href="{% url 'upload_file' %}">upload a file</a></p>
+{% if success %}
+    <p style="color: green;">{{ success }}</p>
+    <meta http-equiv="refresh" content="5; url={% url 'upload_file' %}">
+{% endif %}
+{% if error %}
+    <p style="color:red;">{{ error }}</p>
+    <meta http-equiv="refresh" content="5; url={% url 'upload_url' %}">
+{% endif %}
+</body>
+</html>

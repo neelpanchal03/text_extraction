@@ -58,3 +58,16 @@ def extract_text_from_doc(file_path):
     except Exception as e:
         print(f"Error extracting DOC text: {e}")
     return text
+
+
+def download_file_from_url(url):
+    local_filename = url.split('/')[-1]
+    response = requests.get(url, stream=True)
+
+    if response.status_code == 200:
+        with open(local_filename, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        return local_filename
+    else:
+        raise Exception(f"Failed to download the file: {url}")

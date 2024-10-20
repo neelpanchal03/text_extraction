@@ -52,8 +52,21 @@ The project will be accessible at `http://localhost:8000`.
 ### Step 5: Dependencies  
 All required dependencies will be installed automatically inside the containers during the build process.
 
-### Step 6: Open the Upload Page  
+### Step 6: Open the Upload File Page  
 - Once the application is running, open your web browser and navigate to the `/upload_file/` endpoint.
 
 
 - This will open a basic HTML page that allows you to upload a file and enter your email address for notifications.
+
+### Step 7: Open the Upload via URL Page  
+- Once the application is running, open your web browser and navigate to the `/upload_url/` endpoint.
+
+
+- This will open a basic HTML page that allows you to upload a url and enter your email address for notifications.
+
+### here are some of link you can use to test the application
+
+- [Google Docs Public URL] https://docs.google.com/document/d/1nDdhZ2dLEflbg9x_xwqm2BrThuSAEAqnq8r0qVwU0-A/edit?usp=sharing
+- [Google Drive Public URL] https://drive.google.com/file/d/1zlll8cRMoxmsHN9HVxI7Es4ZbLBrfyHn/view?usp=sharing
+- [S3 Public URL .docx] https://yhyl.s3.amazonaws.com/users/623/mydocuments/doc.docx
+- [S3 Public URL .pdf] https://yhyl.s3.amazonaws.com/users/623/mydocuments/pdf.pdf
