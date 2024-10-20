@@ -17,7 +17,7 @@ Open a terminal and run the following command to clone the project:
 git clone https://github.com/neelpanchal03/text_extraction.git
 cd text_extraction
 ```
-
+keep ```.env``` file in root directory of project
 ### Step 2: Build Docker Containers  
 Build the Docker containers by running:
 
