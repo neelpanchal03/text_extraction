@@ -52,6 +52,20 @@ The project will be accessible at `http://localhost:8000`.
 ### Step 5: Dependencies  
 All required dependencies will be installed automatically inside the containers during the build process.
 
+### Step 6: Run Migrations  
+Run the following command to apply the migrations:
+
+```bash
+docker exec -it e2m_practical_interview-web-1 bash
+```
+
+This will open a bash shell inside the web container. Run the following commands to apply the migrations:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
 ### Step 6: Open the Upload File Page  
 - Once the application is running, open your web browser and navigate to the `/upload_file/` endpoint.
 
